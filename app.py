@@ -38,7 +38,12 @@ def student_get_by_id(id):
 
     return "id not found"
 
-
+@todo.route('/students-list/restapi')
+def students_list_restapi():
+  import requests
+  url = "https://rest-api-w214.onrender.com/students-list"
+  response = requests.request("GET", url)
+\
 
 if __name__ == '__main__':
     todo.run(
